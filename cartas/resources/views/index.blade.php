@@ -14,5 +14,5 @@
         </div>
     </footer>
 </div>
-<script type="text/javascript" src="{{ URL::asset('static/js/main.js') }}"></script>
+<!--<script type="text/javascript" src="{{ URL::asset('static/js/main.js') }}"></script>-->
 @endsection

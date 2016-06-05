@@ -39,22 +39,20 @@ Route::get('register', 'Auth\AuthController@getRegister');
 Route::post('register', 'Auth\AuthController@postRegister');
 
 //listado de plantillas
+Route::post('crear','ModeloController@crear');
+
 Route::get('listar_plantillas','ModeloController@mismodelos');
 
 Route::get('plantillas/{id}','ModeloController@armarplantilla');
 
 Route::get('plantillas/{id}/borrar','ModeloController@eliminar');
 
-
-Route::post('crear','ModeloController@crear');
-
-
 Route::get('listar_cartas','CartaController@cartas');
 
 Route::get('cartas/{id}','CartaController@armarplantilla');
 Route::get('cartas/{id}/borrar','CartaController@eliminar');
 
-Route::get('descargar/{nombre}','PdfController@descargar');
+Route::get('descargar/{nombrearchivo}','PdfController@descargar');
 
 //crea carta y guarda pdf
 Route::post('plantillas/guardar','PdfController@guardar');

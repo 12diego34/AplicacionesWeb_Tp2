@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="{{ URL::asset('static/css/fonts.css') }}" media="screen" charset="utf-8">
         <link rel="stylesheet" href="{{ URL::asset('static/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('static/css/styles.css') }}">
-        <script src="{{ URL::asset('static/js/jquery-1.12.3.min.js') }}"></script>
         <script src="{{ URL::asset('static/js/bootstrap.min.js')}}"></script>
+        <script src="{{ URL::asset('static/js/jquery-1.12.3.min.js') }}"></script>
         <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
         
     </head>
@@ -33,8 +33,9 @@
                                
                     @if (Auth::guest())
                     <ul class="nav navbar-nav navbar-right">
+                         <li><a href="{{ url('/login')}}"><span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
                         <li><a href="{{ url('register') }}"><span class="glyphicon glyphicon-user"></span>  Sign Up</a></li>
-                        <li><a href="{{ url('/login')}}"><span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+                       
                     
                     @else
                     

@@ -18,17 +18,19 @@ class PdfController extends Controller
 	    $carta = new Carta;
 	    $carta->usuario = $usuario;
 	    $carta->nombrearchivo = $datos["nombre_archivo"];
-	    $carta->patharchivo = storage_path('app/public/'. $carta->nombrearchivo . '.pdf');
-		Storage::disk('public')->put($carta->nombrearchivo . ".pdf",$pdf->output());
+	    $carta->save();
+	    $carta->patharchivo = storage_path('app')."/".$carta->id.".pdf";
+	    //$carta->patharchivo = storage_path('app'. $carta->id.'.pdf');
+		Storage::disk('public')->put($carta->id.".pdf",$pdf->output());
 	    $carta->save();
 		return "1";
 	}
 
-	public function descargar($nombre){
-		$file= storage_path('app')."/".$nombre.".pdf";
+	public function descargar($nombrearchivo){
+		$file= storage_path('app/public')."/".$nombrearchivo.".pdf";
         $headers = array(
               'Content-Type: application/pdf',
             );
-        return Response::download($file, 'carta.pdf', $headers);
+        return Response::download($file, 'carta_Dit.pdf', $headers);
 	}
 }

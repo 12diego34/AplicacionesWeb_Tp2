@@ -13,12 +13,12 @@
         <form method="POST" action="login">
             {!! csrf_field() !!}
             <div class="form-group">
-                {!! Form::label('email', 'Email:', ['class' => 'control-label']) !!}
-                {!! Form::email('email', old('email'), array('placeholder'=>'', 'class' => 'form-control')) !!}
+                {!! Form::label('email', 'Correo electrónico:', ['class' => 'control-label']) !!}
+                {!! Form::email('email', old('email'), array('placeholder'=>'Ingresa tu correo electrónico', 'class' => 'form-control')) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('password', 'Contraseña:', ['class' => 'control-label']) !!}
-                {!! Form::password('password', array('placeholder'=>'', 'class'=>'form-control' ) ) !!}
+                {!! Form::password('password', array('placeholder'=>'Ingresa tu contraseña', 'class'=>'form-control' ) ) !!}
             </div>
             <div class="form-group">
                 {!! Form::submit('Iniciar sesión', ['class' => 'btn btn-default lead btn-full-width']) !!}                

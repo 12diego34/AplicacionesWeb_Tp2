@@ -40,11 +40,13 @@
                         echo "<td>".$modelo->descripcion."</td>";
                         echo '<td> 
                         <a href="plantillas/'.$modelo->id.'" class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-pencil"></span></a>
+                        <span class="glyphicon glyphicon-pencil" title="Descargar"></span></a>
+
                         <a type="button" id='.$modelo->id.' class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-envelope"></span></a>
+                        <span class="glyphicon glyphicon-send" title="Enviar por mail"></span></a>
+                        
                         <a href="plantillas/'.$modelo->id.'/borrar" class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-trash"></span></a>
+                        <span class="glyphicon glyphicon-trash" title="Eliminar"></span></a>
                         </td>';
                         echo "</tr>";
                     ?>

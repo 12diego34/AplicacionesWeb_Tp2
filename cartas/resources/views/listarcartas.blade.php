@@ -31,11 +31,13 @@
                         echo "<td>".$carta->usuario."</td>";
                         echo '<td> 
                         <a href="#" type="button" id='.$carta->id.' class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-envelope"></span></a>
+                        <span class="glyphicon glyphicon-send" title="Enviar por mail"></span></a>
+
                         <a href="descargar/'.$carta->id.'" class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-download-alt"></span></a>
+                        <span class="glyphicon glyphicon-download-alt" title="Descargar"></span></a>
+                        
                         <a href="cartas/'.$carta->id.'/borrar" class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-trash"></span></a>
+                        <span class="glyphicon glyphicon-trash" title="Eliminar"></span></a>
                         </td>';
                         echo "</tr>";
                     ?>
