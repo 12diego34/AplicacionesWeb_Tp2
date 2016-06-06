@@ -39,10 +39,11 @@ class ModeloController extends Controller
         }
 
         //dd($request->get('nombre')); 
-        $modelos = Modelo::nombre($request->get('nombre'));
+
     	$modelos = Modelo::where('usuario','=',$username)->get();
     	return view("listarplantillas",['modelos'=>$modelos]);
         
+        $modelos = Modelo::nombre($request->get('nombre'));
 
     }
 

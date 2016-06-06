@@ -23,7 +23,7 @@
                     <button type="submit" class="btn btn-default">Buscar </button>
                 </form>
                 'route' => 'views.listar_plantillas',-->
-                {!!Form::open(['method' =>'GET', 'class'=>'navbar-form navbar-left pull-right', 'role'=>'search'])!!}
+                {!!Form::open((array('url' => 'listar_plantillas','method' =>'GET', 'class'=>'navbar-form navbar-left pull-right', 'role'=>'search')))!!}
                     <div class="form-group">
                         {!! Form::text ('nombre',null,['class' => 'form-control','placeholder'=>'Nombre plantilla'])!!}
                     </div>
