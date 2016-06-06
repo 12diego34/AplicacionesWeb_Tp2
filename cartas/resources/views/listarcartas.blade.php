@@ -30,13 +30,14 @@
                         echo "<td>".$carta->nombrearchivo."</td>";
                         echo "<td>".$carta->usuario."</td>";
                         echo '<td> 
-                        <a href="#" type="button" id='.$carta->id.' class="btn btn-sm btn-warning">
-                        <span class="glyphicon glyphicon-send" title="Enviar por mail"></span></a>
 
                         <a href="descargar/'.$carta->id.'" class="btn btn-sm btn-warning">
                         <span class="glyphicon glyphicon-download-alt" title="Descargar"></span></a>
                         
-                        <a href="cartas/'.$carta->id.'/borrar" class="btn btn-sm btn-warning">
+                        <a href="#" type="button" id='.$carta->id.' class="btn btn-sm btn-warning">
+                        <span class="glyphicon glyphicon-send" title="Enviar por mail"></span></a>
+
+                        <a href="cartas/'.$carta->id.'/borrar" class="btn btn-sm btn-danger">
                         <span class="glyphicon glyphicon-trash" title="Eliminar"></span></a>
                         </td>';
                         echo "</tr>";
@@ -48,4 +49,52 @@
     </div>
     <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
+
+    <!--Modal-->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+        </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="mails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title"> Enviar mail</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group input-group-lg">
+                                <input id="destinatario" type="text" class="form-control" placeholder="Enviar a..." aria-describedby="sizing-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button id="btnEnviarModal" class="btn btn-success pull-right"> Enviar</button> 
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--- Scripts -->    
+    <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('static/js/miscartas.js') }}"></script>
+
 @endsection

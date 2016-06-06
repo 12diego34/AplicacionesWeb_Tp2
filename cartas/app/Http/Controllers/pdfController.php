@@ -20,7 +20,6 @@ class PdfController extends Controller
 	    $carta->nombrearchivo = $datos["nombre_archivo"];
 	    $carta->save();
 	    $carta->patharchivo = storage_path('app')."/".$carta->id.".pdf";
-	    //$carta->patharchivo = storage_path('app'. $carta->id.'.pdf');
 		Storage::disk('public')->put($carta->id.".pdf",$pdf->output());
 	    $carta->save();
 		return "1";

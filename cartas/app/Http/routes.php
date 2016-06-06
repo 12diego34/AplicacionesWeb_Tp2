@@ -57,6 +57,8 @@ Route::get('descargar/{nombrearchivo}','PdfController@descargar');
 //crea carta y guarda pdf
 Route::post('plantillas/guardar','PdfController@guardar');
 
+Route::post('enviar', 'MailController@enviar');
+
 Route::get('sancion', function(){
 	return view('sancion');
 });

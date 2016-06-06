@@ -15,7 +15,7 @@
        <ul class="nav navbar-nav">
         <br>
         <!--onClick="alert('Plantilla guardada')"-->
-        <a class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" id="btnSave">Guardar</a> 
+        <a onClick="alert('Plantilla guardada')" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" id="btnSave">Guardar</a> 
       </ul>       
     </div>
   </div>
