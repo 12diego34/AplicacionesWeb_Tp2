@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="{{ URL::asset('static/css/styles.css') }}">
     <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/bootstrap.min.js')}}"></script>
-        <script src="{{ URL::asset('static/js/buscar.js')}}"></script>
+        
 
 </head>
 @section('vista')
     <div class="container2">
         <div class="cabecera">           
             <h2><p style="color:orange;"> Plantillas</p></h2>       
-              <div class ="buscadormenu">
-                <form id="searchform">
-                    <input type="text" id="search-term-input" class="form-control search-input" placeholder="Buscar " name="search">
-                    <span id ="search-term-button" class="glyphicon glyphicon-search"></span>
+                <!--
+                <form class="navbar-form navbar-left pull-right" role="search">
+                    <div class="form-group">
+                        <input type= "text" class="form-control" placeholder="search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Buscar </button>
                 </form>
+                'route' => 'views.listar_plantillas',-->
+                {!!Form::open(['method' =>'GET', 'class'=>'navbar-form navbar-left pull-right', 'role'=>'search'])!!}
+                    <div class="form-group">
+                        {!! Form::text ('nombre',null,['class' => 'form-control','placeholder'=>'Nombre plantilla'])!!}
+                    </div>
+                    <button type="submit" class="btn btn-default">Buscar </button>
+                {!!Form::close() !!}
             <div class="cabecera2">
                 <table  class="table table-striped table-bordered table-condensed">
                    <thead>
                         <tr>
                             <th style="text-align:center;" width="4%"> ID </th>       
-                            <th style="text-align:center;" width="25%"> Fecha</th>
-                            <th style="text-align:center;" width="10%"> Nombre </th>       
+                            <th style="text-align:center;" width="15%"> Fecha</th>
+                            <th style="text-align:center;" width="22%"> Nombre </th>       
                             <th> Descripcion </th>    
                             <th> Opciones </th>    
                         </tr>

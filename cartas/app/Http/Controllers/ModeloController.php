@@ -30,14 +30,20 @@ class ModeloController extends Controller
     }
 
     public function mismodelos(Request $request){
+
         $usuario = $request->user();
         if (is_object($usuario)){
             $username = $usuario->email;
         }else{
             $username = "";
         }
+
+        //dd($request->get('nombre')); 
+        $modelos = Modelo::nombre($request->get('nombre'));
     	$modelos = Modelo::where('usuario','=',$username)->get();
     	return view("listarplantillas",['modelos'=>$modelos]);
+        
+
     }
 
     public function armarplantilla($id){

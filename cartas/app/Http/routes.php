@@ -25,6 +25,7 @@ Route::get('crear_plantilla',function(){
 	return view('crearplantilla');
 });
 
+
 /* Authentication routes */
 
 //login
