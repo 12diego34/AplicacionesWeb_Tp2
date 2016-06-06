@@ -31,7 +31,7 @@
                         echo "<td>".$carta->usuario."</td>";
                         echo '<td> 
 
-                        <a href="descargar/'.$carta->id.'" class="btn btn-sm btn-warning">
+                        <a href="descargar/'.$carta->nombrearchivo.'" class="btn btn-sm btn-warning">
                         <span class="glyphicon glyphicon-download-alt" title="Descargar"></span></a>
                         
                         <a href="#" type="button" id='.$carta->id.' class="btn btn-sm btn-warning">

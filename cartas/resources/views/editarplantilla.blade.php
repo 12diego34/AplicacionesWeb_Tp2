@@ -55,7 +55,7 @@
     <div class="list-group panel">  
        <ul class="nav navbar-nav">
         <br>
-        <a onClick="alert('Carta Guardada')" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" id="btnSave">Guardar</a> 
+        <a onClick="alert('Carta Guardada')" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu" id="btnGuardar">Guardar</a> 
       </ul>       
     </div>
   </div>

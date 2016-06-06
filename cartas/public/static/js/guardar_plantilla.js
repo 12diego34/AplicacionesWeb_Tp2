@@ -1,4 +1,4 @@
-$("#btnSave").click(function(){
+$("#save").click(function(){
 	var nombre = $("#nombre").val();
 	var descripcion = $("#descripcion").val();
 	var contenido = {"contenido":tinyMCE.activeEditor.getContent(),

@@ -1,4 +1,4 @@
-$("#btnSave").click(function(){
+$("#btnGuardar").click(function(){
 	if ($("#nombre_archivo").val() == ""){
 		var modal = $("#modal");
 		modal.find(".modal-title").text("Error");
