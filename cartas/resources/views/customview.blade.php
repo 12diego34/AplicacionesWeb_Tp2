@@ -1,6 +1,6 @@
 @extends('editarplantilla')
 @section('contenidoCarta')
-<div class="cabecera2" id="contenido">
+<div class="cabecera3" id="contenido">
         <?php 
             echo $contenido;
         ?>

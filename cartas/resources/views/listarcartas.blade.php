@@ -30,14 +30,13 @@
                         echo "<td>".$carta->nombrearchivo."</td>";
                         echo "<td>".$carta->usuario."</td>";
                         echo '<td> 
-
                         <a href="descargar/'.$carta->nombrearchivo.'" class="btn btn-sm btn-warning">
                         <span class="glyphicon glyphicon-download-alt" title="Descargar"></span></a>
                         
                         <a href="#" type="button" id='.$carta->id.' class="btn btn-sm btn-warning">
                         <span class="glyphicon glyphicon-send" title="Enviar por mail"></span></a>
 
-                        <a href="cartas/'.$carta->id.'/borrar" class="btn btn-sm btn-danger">
+                        <a href="cartas/'.$carta->id.'/borrar" class="btn btn-sm btn-warning">
                         <span class="glyphicon glyphicon-trash" title="Eliminar"></span></a>
                         </td>';
                         echo "</tr>";
@@ -96,5 +95,4 @@
     <script src="{{ URL::asset('static/js/jquery-2.2.3.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('static/js/miscartas.js') }}"></script>
-
 @endsection

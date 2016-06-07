@@ -37,13 +37,17 @@ class ModeloController extends Controller
         }else{
             $username = "";
         }
-
-        //dd($request->get('nombre')); 
-
-    	$modelos = Modelo::where('usuario','=',$username)->get();
+       
+        //dd($request->get('nombre'));  
+        if ($request->get('nombre')){  
+            $modelos = Modelo::nombre($request->get('nombre'));
+            return view("listarplantillas",['modelos'=>$modelos]);
+    	}
+        $modelos = Modelo::where('usuario','=',$username)->get();
     	return view("listarplantillas",['modelos'=>$modelos]);
-        
-        $modelos = Modelo::nombre($request->get('nombre'));
+
+        //
+
 
     }
 

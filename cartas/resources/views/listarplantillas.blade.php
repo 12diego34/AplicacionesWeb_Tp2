@@ -13,9 +13,14 @@
 </head>
 @section('vista')
     <div class="container2">
-        <div class="cabecera">           
+        <div class="cabecera"> 
+        
+            <a href="{{ URL::to('crear_plantilla') }}" class="btn btn-warning pull-right">
+            <span class=" glyphicon glyphicon-plus" title="Nueva"></span></a>         
+        
             <h2><p style="color:orange;"> Plantillas</p></h2>       
-                <!--
+                    <!--
+        
                 <form class="navbar-form navbar-left pull-right" role="search">
                     <div class="form-group">
                         <input type= "text" class="form-control" placeholder="search">
@@ -23,12 +28,15 @@
                     <button type="submit" class="btn btn-default">Buscar </button>
                 </form>
                 'route' => 'views.listar_plantillas',-->
-                {!!Form::open((array('url' => 'listar_plantillas','method' =>'GET', 'class'=>'navbar-form navbar-left pull-right', 'role'=>'search')))!!}
+
+                {!!Form::open(['method' =>'GET','class'=>'navbar-form navbar-left pull-right', 'role'=>'search'])!!}
                     <div class="form-group">
+
                         {!! Form::text ('nombre',null,['class' => 'form-control','placeholder'=>'Nombre plantilla'])!!}
-                    </div>
+                    </div>      
                     <button type="submit" class="btn btn-default">Buscar </button>
                 {!!Form::close() !!}
+
             <div class="cabecera2">
                 <table  class="table table-striped table-bordered table-condensed">
                    <thead>

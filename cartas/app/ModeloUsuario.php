@@ -12,7 +12,10 @@ class ModeloUsuario extends Model
 
  	public function scopeNombre($query, $nombre)
  	{
- 		//dd("scope:" . $nombre);
+ 		dd("scope:" . $nombre);
  		$query->where('nombre',$nombre);
+ 		$modelos = Modelo::nombre($request->get('nombre'));
+        return view("listarplantillas",['modelos'=>$modelos]);
+    	
  	}
 }

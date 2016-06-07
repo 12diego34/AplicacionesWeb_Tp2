@@ -55,6 +55,7 @@ Route::get('cartas/{id}/borrar','CartaController@eliminar');
 
 Route::get('descargar/{nombrearchivo}','PdfController@descargar');
 
+//Route::get('busqueda','ModeloController@busqueda');
 //crea carta y guarda pdf
 Route::post('plantillas/guardar','PdfController@guardar');
 

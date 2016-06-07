@@ -19,7 +19,6 @@
             font-size: 15px;
             line-height: 1.42857143;
             color: #2c3e50;
-            background-color: #ffffff;
             border: 1px solid #dce4ec;
             border-radius: 4px;
           -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
